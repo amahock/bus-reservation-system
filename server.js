@@ -9,7 +9,7 @@ const ForgotPasswordRouter = require("./Routes/ForgotPasswordRouter");
 const ResetPasswordRouter = require("./Routes/ResetPasswordRouter");
 const UpdatePasswordViaEmailRouter = require("./Routes/UpdatePasswordViaEmailRouter");
 
-require("dotenv").config();
+// require("dotenv").config();
 require("./Config/MongoDB");
 
 const app = express();
