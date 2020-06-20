@@ -9,12 +9,14 @@ const ForgotPasswordRouter = require("./Routes/ForgotPasswordRouter");
 const ResetPasswordRouter = require("./Routes/ResetPasswordRouter");
 const UpdatePasswordViaEmailRouter = require("./Routes/UpdatePasswordViaEmailRouter");
 
+const PORT = process.env.PORT || 5000;
 // require("dotenv").config();
 require("./Config/MongoDB");
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+
 
 // app.get("/", (req, res) => {
 //   res.send("Backend for Bus booking website");
@@ -38,6 +40,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
  })
 
-const server = app.listen(4000, () => {
+const server = app.listen(PORT, () => {
   console.log("Server running on port " + server.address().port);
 });
